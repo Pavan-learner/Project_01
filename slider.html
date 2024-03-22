@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Automatic Product Slider</title>
+<style>
+  .slider {
+    overflow: hidden;
+    margin: 0 auto;
+  }
+  .slides {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    border:1px solid black;
+    transition: transform 0.5s ease-in-out;
+  }
+  .slide {
+    width: 100%;
+    flex-shrink: 0;
+  }
+  
+</style>
+</head>
+<body>
+
+<div class="slider">
+  <div class="slides">
+    <div class="slide"><img src="product1.jpg" alt="Product 1"></div>
+    <div class="slide"><img src="product2.jpg" alt="Product 2"></div>
+    <div class="slide"><img src="product3.jpg" alt="Product 3"></div>
+    <!-- Add more slides as needed -->
+  </div>
+</div>
+
+<script>
+  const slider = document.querySelector('.slider');
+  const slides = document.querySelector('.slides');
+  const slideWidth = slider.clientWidth;
+  let currentIndex = 0;
+
+  function nextSlide() {
+    currentIndex++;
+    if (currentIndex >= slides.children.length) {
+      currentIndex = 0;
+    }
+    updateSlidePosition();
+  }
+
+  function updateSlidePosition() {
+    slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+  }
+
+  setInterval(nextSlide, 3000); // Change slide every 3 seconds (3000 milliseconds)
+</script>
+
+</body>
+</html>
+

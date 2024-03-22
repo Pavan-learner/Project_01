@@ -1,0 +1,168 @@
+html {
+    width: 100%;
+    height: 100%;
+    /* overflow: hidden; */
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 16px;
+    font-weight: 1.4;
+    color: var(--dark-color);
+    background-color: var(--white-color);
+}
+
+
+/* Container of offers and info */
+.info-bar{
+    height: 30vh;
+
+}
+.offer-center{
+    background-color: var(--light-bg-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+
+.offer-center .center-offer h2{
+    font-size: 1.5rem;
+    color: #794afa;
+    text-wrap: nowrap;
+}
+
+.thoughts-bar {
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.thoughts-bar .right{
+    /* width: calc(70vw - 3em); */
+    /* margin-left: 3em; */
+    max-width: 600px;
+    /* flex-grow: 1; */
+}
+
+@media screen and (max-width: 600px) {
+    .thoughts-bar .right{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+
+.thoughts-bar .left {
+    width: 30vw;
+    /* border: 2px solid black; */
+    margin-left: 1vw;
+    color: #794afa;
+    display: flex;
+    flex-wrap: nowrap;
+    height: 70px;
+    border-right: solid 1px black;
+}
+
+/* items part */
+
+.items-part {
+    display: flex;
+    align-items: center;
+    /* justify-content: space; */
+    /* margin: 2em; */
+
+
+    /* gap: 2em; */
+}
+
+.items-part .left-contact .review-box{
+    width: 25vw;
+    height: 25vh;
+    /* border: 1px solid red; */
+    /* border-radius: 5vw;   */
+    /* gap: 2rem; */
+    box-shadow: 10px 10px 20px 0px black;
+    /* margin: 2rem; */
+    /* gap: 200px; */
+    margin-top: 4vh;
+
+    /* margin-right: 100px; */
+    background-color: #794afa;
+}
+
+.items-part .left-contact h3{
+    color: white;
+    font-size: 1.5vw;
+    text-align: center;
+    /* box-shadow: 10px 10px 20px 0px black; */
+
+}   
+
+.items-part .left-contact p{
+    margin: 1em;
+    font-size: 1rem;
+    color: white;
+    font-style: italic;
+}
+
+
+/* Item container */
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+}
+
+.box-item {
+    width: 20vw; /* Adjusted width for responsiveness */
+    /* max-width: 30vh; Set a maximum width to prevent items from becoming too large on larger screens */
+    height: auto; /* Adjust height automatically based on content */
+    border: 1px solid black;
+    margin: 1vw; /* Adjusted margin for responsiveness */
+    box-sizing: border-box; /* Include borders in the width calculation */
+}
+
+.box-item img {
+    width: 100%; /* Adjusted width to fill the container */
+    height: auto; /* Adjust height automatically based on aspect ratio */
+}
+
+.item-container .desc h3,
+.item-container .desc p {
+    text-align: center;
+    font-style: italic;
+}
+
+
+
+
+
+/* For mobile display */
+@media screen and (max-width: 600px) {
+
+    .item-container{
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .box-item{
+        width: 100vw;
+        overflow:hidden;
+        height: auto;
+    }
+
+    .box-item img{
+        width: 99vw;
+        height: auto;
+    }
+
+    .item-container .desc {
+        text-align: center;
+    }
+
+    .items-part .left-contact{
+        display: none;
+    }   
+}
