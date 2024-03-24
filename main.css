@@ -663,8 +663,9 @@ form.search button:hover {
 /* Main-content [Slide Bar] */
 /* ****************** */
 
-.slider>div>.wrapper {
+.slider > div > .wrapper {
     width: calc(100% - (300px + 3em));
+    /* width: 60vw; */
     margin-left: auto;
 }
 
@@ -672,6 +673,7 @@ form.search button:hover {
     /* display: flex; */
     position: relative;
     height: 470px;
+    width: 65vw;
 }
 
 .slider .text-content {
